@@ -1,8 +1,6 @@
 import { getPermalink } from './utils/permalinks';
 
-// IMPORTANTE: cambiar el número de WhatsApp por el real cuando lo tengamos.
-// Formato: 34 + número sin espacios. Ejemplo: 34666123456
-const WHATSAPP_NUMBER = '34000000000'; // PLACEHOLDER — sustituir
+const WHATSAPP_NUMBER = '34618324653';
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 export const headerData = {
