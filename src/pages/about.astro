@@ -1,228 +1,156 @@
 ---
 import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
+// PLACEHOLDER — sustituir por número real
+const WHATSAPP_LINK = 'https://wa.me/34000000000';
+
 const metadata = {
-  title: 'About us',
+  title: 'Sobre mí — Juan Pedro García Valera',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
+  <!-- Hero -->
   <Hero
-    tagline="About us"
+    tagline="Sobre mí"
     image={{
       src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
+      alt: 'Murcia',
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white"> Beautiful Website Templates</span>
+      Soy Juan Pedro <br />
+      <span class="text-accent dark:text-white">y vivo en Alhama de Murcia</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      Construyo automatizaciones e integraciones con IA para PYMEs de la Región de Murcia.
+      Mi objetivo es claro: que ningún negocio local pierda leads, ni horas, ni dinero
+      en tareas repetitivas que un sistema bien montado puede hacer mejor que un humano.
     </Fragment>
   </Hero>
 
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    title="Statistics about us"
-    stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
-    ]}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
-    columns={3}
-    isBeforeContent={true}
-    items={[
-      {
-        title: 'Educational',
-        description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Interior Design',
-        description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Photography',
-        description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
-      },
-    ]}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Blog',
-        description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Business',
-        description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
-    }}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
+  <!-- Por qué hago esto -->
   <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+    title="Por qué hago esto"
+    subtitle="No vendo IA en abstracto. Vendo resultados medibles para negocios reales que conozco de cerca."
     items={[
       {
-        title: 'Customer-centric approach',
+        title: 'El problema',
         description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+          'La mayoría de clínicas, gestorías y comercios de Murcia siguen contestando WhatsApp a las 23:00 o llevando facturas en Excel. Pierden 8-15 horas a la semana en tareas que un robot puede hacer mejor.',
       },
       {
-        title: 'Constant Improvement',
+        title: 'La oportunidad',
         description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+          'Hace 2 años montar un chatbot decente costaba 5.000-10.000€ y exigía un equipo de 3 personas un mes. Hoy lo monto solo en 7-14 días gracias a IA, n8n y herramientas modernas.',
       },
       {
-        title: 'Ethical Practices',
+        title: 'La solución',
         description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+          'Yo cierro el gap. Tengo el conocimiento técnico, las herramientas modernas, y vivo aquí. Tú tienes el negocio y el problema. Hablamos 15 minutos, te digo si puedo ayudarte, y si encaja lo monto.',
       },
     ]}
   />
 
-  <!-- Steps2 Widget ****************** -->
-
+  <!-- Cómo trabajo -->
   <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
+    title="Cómo trabajo"
+    subtitle="Sin sorpresas, sin letra pequeña, sin perder el tiempo."
     isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
     items={[
       {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
+        title: 'Precio cerrado, no por horas',
+        description: 'Lo que ves en mi web es lo que pagas. Sin "depende", sin "consultar", sin presupuestos personalizados ocultos.',
+        icon: 'tabler:cash',
       },
       {
-        title: 'Positive customer feedback and reviews',
-        description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
+        title: '50% al firmar, 50% al entregar',
+        description: 'Compromiso por las dos partes. Empezamos cuando entra el 50%. Cierras cuando recibes y validas.',
+        icon: 'tabler:file-check',
       },
       {
-        title: 'Awards and recognition as industry experts',
-        description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
+        title: 'Garantía 30 días o devolución',
+        description: 'Si en 30 días el sistema no funciona como acordamos en el contrato, te devuelvo el dinero íntegro.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Documentación clara',
+        description: 'Te paso vídeo + texto explicando cómo funciona todo. Si me voy a la luna mañana, sigues operativo.',
+        icon: 'tabler:book',
       },
     ]}
   />
 
-  <!-- Features2 Widget ************** -->
-
+  <!-- Dónde estoy -->
   <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
+    title="Dónde estoy"
+    tagline="Ubicación"
+    columns={3}
     items={[
       {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
+        title: 'Sede',
+        description: 'Alhama de Murcia (España). Aquí pienso, aquí construyo, aquí vivo.',
+        icon: 'tabler:home',
       },
       {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
+        title: 'Presencial',
+        description: 'Murcia capital, Cartagena, Lorca, Molina, Alcantarilla y costa. Radio de 50 km.',
+        icon: 'tabler:map-pin',
       },
       {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+        title: 'Remoto',
+        description: 'Toda España. La mayoría del trabajo se hace por videollamada y email.',
+        icon: 'tabler:device-laptop',
       },
     ]}
   />
 
-  <!-- Features2 Widget ************** -->
-
+  <!-- Cómo contactar -->
   <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="Cómo contactarme"
+    tagline="Hablamos"
     columns={2}
     items={[
       {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
+        title: 'WhatsApp (recomendado)',
+        description: 'Es donde más rápido te contesto. Lunes a viernes.',
+        icon: 'tabler:brand-whatsapp',
       },
       {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
+        title: 'Email',
+        description: 'juanpedro@automatizamurcia.com — respuesta en menos de 24h laborables.',
+        icon: 'tabler:mail',
       },
     ]}
   />
+
+  <!-- CTA -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Hablar por WhatsApp',
+        href: WHATSAPP_LINK,
+        target: '_blank',
+        icon: 'tabler:brand-whatsapp',
+      },
+      {
+        text: 'Escribir un email',
+        href: 'mailto:juanpedro@automatizamurcia.com',
+        icon: 'tabler:mail',
+      },
+    ]}
+  >
+    <Fragment slot="title">¿Hablamos 15 minutos?</Fragment>
+
+    <Fragment slot="subtitle">
+      Sin compromiso, sin discurso comercial. Me cuentas qué necesitas y te digo
+      si puedo ayudarte. Si no encaja, te lo digo directamente y nos despedimos como amigos.
+    </Fragment>
+  </CallToAction>
 </Layout>

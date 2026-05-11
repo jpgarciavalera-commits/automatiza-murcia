@@ -4,75 +4,108 @@ import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
+// PLACEHOLDER — sustituir por número real
+const WHATSAPP_LINK = 'https://wa.me/34000000000';
+
 const metadata = {
-  title: 'Contact',
+  title: 'Contacto — Automatiza Murcia',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
+  <!-- Hero -->
+  <HeroText
+    tagline="Contacto"
+    title="Hablamos 15 minutos"
+    subtitle="Sin compromiso. Me cuentas qué problema concreto quieres resolver y te digo si tiene sentido contratarme. Si no encaja, te lo digo directamente. La forma más rápida es WhatsApp."
+  />
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <!-- Canales de contacto -->
+  <Features2
+    title="Cómo llegar a mí"
+    tagline="Canales"
+    columns={3}
+    items={[
+      {
+        title: 'WhatsApp (lo más rápido)',
+        description: 'Escríbeme y te contesto en horario laboral en menos de 2h.',
+        icon: 'tabler:brand-whatsapp',
+        callToAction: {
+          target: '_blank',
+          text: 'Abrir WhatsApp',
+          href: WHATSAPP_LINK,
+        },
+      },
+      {
+        title: 'Email',
+        description: 'juanpedro@automatizamurcia.com — respuesta en menos de 24h laborables.',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'LinkedIn',
+        description: 'Mándame un DM o mira mi perfil profesional.',
+        icon: 'tabler:brand-linkedin',
+      },
+    ]}
+  />
 
+  <!-- Formulario -->
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="O escríbeme aquí directamente"
+    subtitle="Si prefieres formulario antes que WhatsApp, te leo. Te contesto al email que me dejes en menos de 24h laborables."
     inputs={[
       {
         type: 'text',
         name: 'name',
-        label: 'Name',
+        label: 'Tu nombre',
       },
       {
         type: 'email',
         name: 'email',
-        label: 'Email',
+        label: 'Tu email',
+      },
+      {
+        type: 'text',
+        name: 'business',
+        label: 'Tu negocio (opcional)',
       },
     ]}
     textarea={{
-      label: 'Message',
+      label: 'Qué problema quieres resolver',
+      placeholder: 'Cuéntame en 2-3 líneas qué te trae aquí. Cuanto más concreto, mejor te puedo ayudar.',
     }}
     disclaimer={{
       label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+        'Al enviar este formulario aceptas que use tus datos solo para contestarte. No te apunto a ninguna lista de spam ni revendo nada.',
     }}
-    description="Our support team typically responds within 24 business hours."
+    description="Te contesto en menos de 24h laborables."
   />
 
-  <!-- Features2 Widget ************** -->
-
+  <!-- Datos -->
   <Features2
-    title="We are here to help!"
+    title="Datos rápidos"
+    columns={2}
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
         title: 'Email',
-        description: 'contact@support.com',
+        description: 'juanpedro@automatizamurcia.com',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
+        title: 'WhatsApp',
+        description: 'Lunes a viernes en horario laboral',
+        icon: 'tabler:brand-whatsapp',
+      },
+      {
+        title: 'Ubicación',
+        description: 'Alhama de Murcia, España. Atiendo presencial Murcia + 50 km y remoto toda España.',
         icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Horario',
+        description: 'Lunes a viernes. Fines de semana descansamos los dos.',
+        icon: 'tabler:clock',
       },
     ]}
   />
